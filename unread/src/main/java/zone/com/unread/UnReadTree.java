@@ -12,12 +12,11 @@ import java.util.Map;
  * UnReadTree 一次性配置。结构清晰。 相比 activity配置中好太多
  * <p>
  *
- *
  * 设计具体细节：
- * UnReadNode(associate.class)【Compsite 与 class关联】；
+ * UnReadNode(associate.class)【UnReadNode 与 class关联】；
  * <p>
  * activity（开始UnReadTree.setLister(UnReadCallback)【包含find的功能通过UnReadCallback.getClass】
- * =能找到这个compiste return,并且这个回调还可以处理 未读消息的通知）
+ * =能找到这个UnReadNode return,并且这个回调还可以处理 未读消息的通知）
  * <p>
  * 添加消息的时候 ，用这个 开始UnReadTree.setLister 返回的UnReadNode 节点去添加未读消息数量 即可！
  * <p>
